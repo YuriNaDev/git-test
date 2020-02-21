@@ -97,6 +97,17 @@ $ git checkout -b <branch-name> HEAD~1
 $ git rm --cached <filename>
 ```
 
+### 5) dev가 과거 버전인 상태에서 브랜치를 생성, 수정했을 때
+```
+$ git checkout <branch-name>
+$ git add .
+$ git commit -am "commit message"
+$ git checkout dev
+$ git pull origin dev
+$ git checkout <branch-name>
+$ git merge dev
+```
+
 # 4. 참고
 - https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow
 - https://gmlwjd9405.github.io/2017/10/27/how-to-collaborate-on-GitHub-1.html
